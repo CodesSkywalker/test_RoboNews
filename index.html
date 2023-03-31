@@ -7,13 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="public/build/tailwind.css">
+    <link rel="stylesheet" href="style.css">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <script src="wow.min.js"></script>
+    <script>
+      new WOW().init();
+      </script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Розумні машини сьогодні </title>
   </head>
   <body class="font-sans">
@@ -100,8 +109,8 @@
             </a>
           </div>
           <div class="flex w-full lg:w-5/6 mt-4 lg:mt-0 rounded">
-            <a href="#" class="flex flex-col bg-white border rounded-lg shadow-lg lg:max-w-xl">
-              <img class="justify-center pl-40 object-cover ] h-48 lg:h-auto lg:w-full lg:rounded-t-lg lg:rounded-l-none lg:rounded-r-none" src="https://static.espreso.tv/uploads/article/2568949/images/im-00000.jpeg" alt="">
+            <a href="#" class="flex flex-col items-center bg-white border rounded-lg shadow-lg lg:max-w-xl">
+              <img class="flex justify-center object-cover  h-48 lg:h-auto lg:w-full lg:rounded-t-lg lg:rounded-l-none lg:rounded-r-none" src="https://static.espreso.tv/uploads/article/2568949/images/im-00000.jpeg" alt="">
               <div class="flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2  text-justify text-2xl font-bold tracking-tight text-gray-900">Sophia - це розумний робот, розроблений компанією Hanson Robotics. Він використовує штучний інтелект та машинне навчання для спілкування з людьми та виконання певних завдань.
                   Sophia має гуманоїдну форму, що дозволяє йому рухатися та взаємодіяти з людьми більш природно. Він має обличчя з високою деталізацією, яке може виконувати різні вирази та емоції, що робить його більш реалістичним та живим.
@@ -113,7 +122,7 @@
         
 
 
-       <div class="lg:flex my-20 space-y-10 lg:space-x-60 border-b-4  border-dashed border-blue-400 ">
+       <div class="lg:flex my-14 space-y-10 lg:space-x-60 border-b-4  border-dashed border-blue-400 ">
         <div class=" text-left lg:w-2/3 bg-no-repeat relative " >
           <div class=" absolute inset-0"></div>
           <h2 class="font-semibold pb-2 text-teal-700 z-10 relative">Штучний інтелект</h2>
@@ -164,18 +173,19 @@
             <form class="mt-7" action="#" method="post">
               <input class="bg-slate-200 w-full text-slate-600 border rounded-t
                hover:border-gray-600" type="email" name="email" placeholder="Your email address  ">
-              <button id="But" class=" px-4 py-2 my-1 rounded-b w-full bg-indigo-500 hover:bg-indigo-700 text-white">Subscribe</button>
+              <button type="submit" disabled id="But" class=" px-4 py-2 my-1 rounded-b w-full bg-indigo-500 hover:bg-indigo-700 text-white">Subscribe</button>
             </form>
           </div> 
         </div>
         <!-- Pepper -->
 
-          <div class=" mt-0 lg:flex flex-col lg:flex-row px-2 lg:space-x-10">
-            <div class="flex w-full lg:w-5/6 h-auto md:w-full rounded ">
-              <a href="#" class="flex flex-col bg-white border rounded-lg shadow lg:flex-row lg:max-w-xl">
-              <img class="justify-center object-cover w-full h-48 lg:h-auto lg:w-full lg:rounded-t-lg lg:rounded-l-none lg:rounded-r-none"  src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcRfZ9LPIgzq3QEB7ShqGf_mP_OV2SSAU-Q8_WAKvm4FdCbXPUjtvmACAa47TIw9LxZS" alt="Pepper"> 
-               </a>
-          </div>
+        <div data-wow-duration="5s" class="animate__animated animate__bounceInRight animate__slower 	3s  wow 	 -mt-12 lg:flex flex-col lg:flex-row px-2 lg:space-x-10">
+          <div class="flex w-full lg:w-5/6 h-auto md:w-full rounded ">
+            <a href="#" class="flex flex-col bg-white border rounded-lg shadow lg:flex-row lg:max-w-xl">
+            <img class="justify-center object-cover w-full h-48 lg:h-auto lg:w-full lg:rounded-t-lg lg:rounded-l-none lg:rounded-r-none"  src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcRfZ9LPIgzq3QEB7ShqGf_mP_OV2SSAU-Q8_WAKvm4FdCbXPUjtvmACAa47TIw9LxZS" alt="Pepper"> 
+             </a>
+        </div>
+          <!-- src="http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcRfZ9LPIgzq3QEB7ShqGf_mP_OV2SSAU-Q8_WAKvm4FdCbXPUjtvmACAa47TIw9LxZS" -->
         
             <div class="flex w-full lg:w-5/6 h-auto md:w-full rounded">
               <a href="#" class="lg:flex flex-col bg-white border rounded-lg shadow lg:flex-row lg:max-w-xl">
@@ -185,7 +195,7 @@
         </div>
         <!-- 2 -->
         <div class="mt-2 border-t-4  border-dashed border-blue-400  "></div>
-        <div class=" rounded mt-4 lg:flex flex-col lg:flex-row px-2 lg:space-x-10">
+        <div data-wow-duration="5s" class=" animate__animated animate__fadeInLeft animate__slower 	3s wow  rounded mt-4 mb-3 lg:flex flex-col lg:flex-row px-2 lg:space-x-10">
           <div class="flex w-full lg:w-5/6 h-auto md:w-full rounded">
             <a href="#" class="lg:flex flex-col bg-white border rounded-lg shadow lg:flex-row lg:max-w-xl">
                 <p class="text-justify px-6">Робот Boston Dynamics Spot - це чотирикінцевий робот, призначений для використання в різних сферах, включаючи інспекції.

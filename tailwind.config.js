@@ -6,7 +6,9 @@ module.exports = {
     fontFamily: {
       custom: ['Alkatra', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      
+    },
   },
   plugins: [
     // require('@tailwindcss/forms'),

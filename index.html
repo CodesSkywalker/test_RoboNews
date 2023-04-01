@@ -69,7 +69,20 @@
         тільки машини.😥 Вони можуть бути наділеними інтелектом та навіть
         емоціями. Що нас очікує у майбутньому?
       </marquee>
- <div class="max-w-screen-lg m-auto">
+<div class="max-w-screen-lg m-auto">  
+      <!-- Код для Firefox -->
+<div id="firefox" class="flex justify-center" style="display:none">
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6u52uM7tKVZ7I4cLcYFNJr?utm_source=generator" width="100%" height="152"" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+
+<!-- Код для Chrome -->
+<div id="chrome" class="flex justify-center" style="display:none">
+  <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/1614957592" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+</div>
+
+
+
+ 
       <section class="lg:flex mt-4 px-4 lg:space-x-2">
         <a
         
@@ -220,6 +233,11 @@
       </main>
        
   </div>
+  
+    
+ 
+  
+  
       
 <footer class=" w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6  dark:border-gray-600 ">
   <span class="text-sm text-gray-800 sm:text-center dark:text-gray-600">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
@@ -242,7 +260,18 @@
 <!-- <script src="script.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
+<script>
+// Визначення браузера, що використовується користувачем
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
+// Відображення відповідного контенту залежно від браузера
+if (isChrome) {
+  document.getElementById("chrome").style.display = "block";
+} else if (isFirefox) {
+  document.getElementById("firefox").style.display = "block";
+}
+</script>
       
   
     <style>

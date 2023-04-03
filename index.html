@@ -64,16 +64,13 @@
               </div>
             </div>
             
-             <div class="-mr-2 flex z-50 md:hidden">
-          
-              <button type="button" class="inline-flex items-center justify-center rounded-md  p-2 text-gray-400 hover:bg-gray-400 hover:text-white " aria-controls="mobile-menu" aria-expanded="false">
+            <div class="flex z-50 md:hidden">
+              <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
-          
-                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <svg class="hamburger-icon block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
-     
-                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <svg class="close-icon hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -112,31 +109,7 @@
       </nav>
     
     
-    <!-- <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
-      <div class="container flex flex-wrap items-center justify-between mx-auto">
-       <h2 class="font-bold text-green-500 text-2xl"><a href="index.html"> New Time</a></h2>
-        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
-            <li>
-              <a href="index.html"  class="font-bold block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" >Home</a>
-            </li>
-            <li>
-              <a href="about.html" class="block py-2 pl-3 pr-4  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400  md:dark:hover:bg-transparent">About</a>
-            </li>
-          
-            <li>
-              
-              <a href="video_sovia.html" class="block py-2 pl-3 pr-4  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400  md:dark:hover:bg-transparent">Video</a>
-            </li>
-            
-          </ul>
-        </div>
-      </div>
-    </nav> -->
+   
     <!-- Текст що двигається -->
       <marquee
         direction="left"
@@ -346,47 +319,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 
 <script>
-//   const menuButton = document.querySelector('.flex button[aria-controls="mobile-menu"]');
-
-// // Отримуємо меню
-// const mobileMenu = document.getElementById('mobile-menu');
-
-// // Додаємо обробник події на кнопку
-// menuButton.addEventListener('click', () => {
-//   // Змінюємо стан aria-expanded
-//   const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-//   menuButton.setAttribute('aria-expanded', String(!isExpanded));
-//   mobileMenu.classList.toggle('open');
-
-//   // Показуємо/ховаємо меню
-//   mobileMenu.classList.toggle('hidden');
-// });
 
 
-// 2
-// const mobileMenu = document.querySelector("#mobile-menu");
-// const menuButton = document.querySelector('.flex button[aria-controls="mobile-menu"]');
 
-// menuButton.addEventListener("click", () => {
-//   mobileMenu.classList.toggle("hidden");
-// });
 
-// document.addEventListener("click", (event) => {
-//   const isClickInsideMenu = mobileMenu.contains(event.target);
-//   const isClickInsideButton = menuButton.contains(event.target);
 
-//   if (!isClickInsideMenu && !isClickInsideButton) {
-//     mobileMenu.classList.add("hidden");
-//   }
-// });
 const menuButton = document.querySelector('.flex button[aria-controls="mobile-menu"]');
 const mobileMenu = document.getElementById('mobile-menu');
+const hamburgerIcon = document.querySelector('.hamburger-icon');
+  const closeIcon = document.querySelector('.close-icon');
 
 menuButton.addEventListener('click', () => {
   const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!isExpanded));
   mobileMenu.classList.toggle('open');
   mobileMenu.classList.toggle('hidden');
+  hamburgerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
 
   // Отримуємо елемент <html>
   const html = document.querySelector('html');

@@ -17,11 +17,11 @@
 </head>
 <body>
   <nav class="bg-gray-200">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="flex h-16 items-center justify-around">
-        <div class="flex justify-around">
-          <div class="flex-shrink-0">
-            <h2 class="font-bold text-green-500 text-2xl"><a href="index.html"> New Time</a></h2>
+        <div class=" flex justify-around">
+          <div class=" flex-shrink-0">
+            <h2 class=" z-50 font-bold text-green-500 text-2xl"><a href="index.html"> New Time</a></h2>
           </div>
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
@@ -46,7 +46,7 @@
           </div>
         </div>
         
-        <div class="-mr-2 flex md:hidden">
+        <div class="-mr-2 flex z-50 md:hidden">
       
           <button type="button" class="inline-flex items-center justify-center rounded-md  p-2 text-gray-400 hover:bg-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" aria-controls="mobile-menu" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
@@ -64,7 +64,7 @@
     </div>
 
 
-    <div class="hidden" id="mobile-menu">
+    <div class="fixed z-50 h-full inset-x-0  hidden bg-white" id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
 
         <a href="about.html" class="font-bold block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">About</a>
@@ -183,19 +183,38 @@
           } */
         </style>
         <script>
-          const menuButton = document.querySelector('.flex button[aria-controls="mobile-menu"]');
+          // const menuButton = document.querySelector('.flex button[aria-controls="mobile-menu"]');
 
-// Отримуємо меню
+// // Отримуємо меню
+// const mobileMenu = document.getElementById('mobile-menu');
+
+// // Додаємо обробник події на кнопку
+// menuButton.addEventListener('click', () => {
+//   // Змінюємо стан aria-expanded
+//   const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+//   menuButton.setAttribute('aria-expanded', String(!isExpanded));
+
+//   // Показуємо/ховаємо меню
+//   mobileMenu.classList.toggle('hidden');
+// });
+const menuButton = document.querySelector('.flex button[aria-controls="mobile-menu"]');
 const mobileMenu = document.getElementById('mobile-menu');
 
-// Додаємо обробник події на кнопку
 menuButton.addEventListener('click', () => {
-  // Змінюємо стан aria-expanded
   const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!isExpanded));
-
-  // Показуємо/ховаємо меню
+  mobileMenu.classList.toggle('open');
   mobileMenu.classList.toggle('hidden');
+
+  // Отримуємо елемент <html>
+  const html = document.querySelector('html');
+
+  // Забороняємо/дозволяємо прокручування сторінки
+  if (mobileMenu.classList.contains('open')) {
+    html.style.overflow = 'hidden';
+  } else {
+    html.style.overflow = '';
+  }
 });
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>

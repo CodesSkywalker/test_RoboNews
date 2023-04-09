@@ -65,7 +65,7 @@
             </div>
             
             <div class="flex z-50 md:hidden">
-              <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-400 hover:text-white" aria-controls="mobile-menu" aria-expanded="false">
+              <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-400 hover:text-white transition duration-300 ease-in-out" aria-controls="mobile-menu" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="hamburger-icon block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -75,6 +75,7 @@
                 </svg>
               </button>
             </div>
+            
           </div>
         </div>
     
@@ -128,16 +129,16 @@
       </marquee>
       <!-- максимальний розмір екрану -->
 <div id="content" class="max-w-screen-lg m-auto">  
-      <!-- Код для Firefox -->
-<div id="firefox" class="flex bg-red-900  mx-20" >
-  <iframe class="justify-center " src="https://drive.google.com/file/d/1WnvZCAmMGUHiunUiPlj5TGx6hoBqeZj9/preview"  width="100%" height="100" allow="autoplay"></iframe>
-  <!-- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6u52uM7tKVZ7I4cLcYFNJr?utm_source=generator" width="100%" height="152"" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
-</div>
+      
+  <div class="flex justify-center border-t-2 border-b-blue-700">
+    <audio class="mt-2 rounded-lg bg-blue-600 " controls>
+      <source src="https://drive.google.com/uc?export=download&id=1WnvZCAmMGUHiunUiPlj5TGx6hoBqeZj9" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  
 
-<!-- Код для Chrome -->
-<!-- <div id="chrome" class="flex justify-center" style="display:none">
-  <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/1614957592" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
-</div> -->
+
 
 
 <!-- Новини -->
@@ -190,6 +191,17 @@
                 <h5 class="mb-2  text-justify text-2xl  tracking-tight text-gray-700">Sophia - це розумний робот, розроблений компанією Hanson Robotics. Він використовує штучний інтелект та машинне навчання для спілкування з людьми та виконання певних завдань.
                   Sophia має гуманоїдну форму, що дозволяє йому рухатися та взаємодіяти з людьми більш природно. Він має обличчя з високою деталізацією, яке може виконувати різні вирази та емоції, що робить його більш реалістичним та живим.
                   Sophia здатний відповідати на запитання, вести бесіду та виконувати деякі завдання.</h5>
+              </div>
+              <div class="text-center">
+                <div class="">
+                  <h2>Озвучка текста</h2>
+                </div>
+                <audio controls>
+                  <source src="https://drive.google.com/uc?export=download&id=1lfc1DMmPgB74q7rT2NGqfkDi48GC7FwP" type="audio/mp3">
+                  Your browser does not support the audio element.
+                </audio>
+                
+                
               </div>
             </a>
           </div>
@@ -387,6 +399,7 @@ window.addEventListener("scroll", function() {
       
   
     <style>
+      
       #mobile-menu.open {
       display: block;
     }

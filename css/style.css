@@ -621,10 +621,6 @@ video {
   z-index: 10;
 }
 
-.z-20 {
-  z-index: 20;
-}
-
 .z-50 {
   z-index: 50;
 }
@@ -876,6 +872,10 @@ video {
   width: 100%;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -1057,6 +1057,10 @@ video {
   border-top-width: 4px;
 }
 
+.border-t-2 {
+  border-top-width: 2px;
+}
+
 .border-dashed {
   border-style: dashed;
 }
@@ -1088,6 +1092,16 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-b-slate-800 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+
+.border-b-blue-700 {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(29 78 216 / var(--tw-border-opacity));
 }
 
 .bg-blue-700 {
@@ -1168,6 +1182,55 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-orange-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#fff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ce2e2e\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(206 46 46 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#0fc8e4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 200 228 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#0fc8e467\] {
+  background-color: #0fc8e467;
+}
+
+.bg-\[\#2fe2fe\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(47 226 254 / var(--tw-bg-opacity));
+}
+
+.bg-blue-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.bg-blue-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
+.bg-blue-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .bg-no-repeat {
@@ -1270,6 +1333,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -1312,6 +1380,10 @@ video {
 
 .font-alkatra {
   font-family: Alkatra, sans-serif;
+}
+
+.font-Merriweather {
+  font-family: "Merriweather", serif;
 }
 
 .text-2xl {
@@ -1504,6 +1576,10 @@ video {
 
 .duration-200 {
   transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .ease-in-out {

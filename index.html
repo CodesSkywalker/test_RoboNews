@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="public/build/tailwind.css">
+    <!-- <link rel="stylesheet" href="public/build/tailwind.css"> -->
     <link rel="stylesheet" href="style.css">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
@@ -145,20 +145,16 @@
  
       <section class="lg:flex mt-4 px-4 lg:space-x-2">
         <a
+        href="#"
+        class="w-full bg-[#1394c3] lg:w-2/3 overflow-hidden mb-4 h-96 inline-block relative rounded "
         
-          href="#"
-          class="w-full bg-green-200 lg:w-2/3 overflow-hidden mb-4 h-96 inline-block relative rounded "
-          
-         
-
-          
-        >
-          <div class="p-4 absolute bottom-0 left-0 ">
-            <h2 class="text-4xl leading-tight  text-gray-800">
-              У світі роботів: інновації, технології та механізми майбутнього"
-            </h2>
-          </div>
-        </a>
+      >
+        <div class="p-4  absolute bottom-0 left-0 ">
+          <h2 class="text-4xl leading-tight text-gray-800">
+           Робототехніка нашого життя
+          </h2>
+        </div>
+      </a>
         <a
           href="#"
           class="w-full bg-cyan-300 lg:w-1/3 overflow-hidden mb-4 h-96 inline-block relative rounded "
@@ -221,41 +217,35 @@
           <div data-wow-duration="1s" class=" animate__animated animate__slideInRight animate__slower 	3s wow  lg:w-1/3  pb-4 mb-0">
             <ul>
               <li class="px-1 py-4 border-y border-white hover:border-gray-500">
-                <a class="flex items-center text-gray-600" href="#">
+                <a target="_blank" class="flex items-center text-gray-600" href="https://www.hansonrobotics.com/sophia/">
                   <span class="inline-block w-4 h-4 mr-3 bg-teal-600"></span>
                   Sophia
                   <span></span>
                 </a>
               </li>
               <li class="px-1 py-4 border-y border-white hover:border-gray-500">
-                <a class="flex items-center text-gray-600" href="#">
+                <a target="_blank" class="flex items-center text-gray-600" href="https://www.bostondynamics.com/atlas">
                   <span class="inline-block w-4 h-4 mr-3 bg-fuchsia-600"></span>
                   Atlas
                   <span></span>
                 </a>
               </li>
               <li class="px-1 py-4 border-y border-white hover:border-gray-500">
-                <a class="flex items-center text-gray-600" href="#">
+                <a target="_blank" class="flex items-center text-gray-600" href="https://www.aldebaran.com/en/pepper">
                   <span class="inline-block w-4 h-4 mr-3 bg-rose-600"></span>
                   Pepper
                   <span></span>
                 </a>
               </li>
               <li class="px-1 py-4 border-y border-white hover:border-gray-500">
-                <a class="flex items-center text-gray-600" href="#">
-                  <span class="inline-block w-4 h-4 mr-3 bg-fuchsia-600"></span>
+                <a target="_blank" class="flex items-center text-gray-600" href="https://www.bostondynamics.com/products/spot">
+                  <span class="inline-block w-4 h-4 mr-3 bg-[#ff328e]"></span>
                  
                   Boston Dynamics Spot
                   <span></span>
                 </a>
               </li>
-              <li class="px-1 py-4 border-y border-white hover:border-gray-500">
-                <a class="flex items-center text-gray-600" href="#">
-                  <span class="inline-block w-4 h-4 mr-3 bg-lime-600"></span>
-                  AI-MATHS
-                  <span></span>
-                </a>
-              </li>
+              
             </ul>
             <form class="mt-7 mx-4" action="#"  method="post">
               <input class="bg-slate-200 w-full text-slate-600 border rounded-t
@@ -331,73 +321,7 @@
 <!-- <script src="script.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 <script src="script.js"></script>
-<script>
 
-
-
-
-
-// const menuButton = document.querySelector('.flex button[aria-controls="mobile-menu"]');
-// const mobileMenu = document.getElementById('mobile-menu');
-// const hamburgerIcon = document.querySelector('.hamburger-icon');
-//   const closeIcon = document.querySelector('.close-icon');
-
-// menuButton.addEventListener('click', () => {
-//   const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-//   menuButton.setAttribute('aria-expanded', String(!isExpanded));
-//   mobileMenu.classList.toggle('open');
-//   mobileMenu.classList.toggle('hidden');
-//   hamburgerIcon.classList.toggle('hidden');
-//     closeIcon.classList.toggle('hidden');
-
-//   // Отримуємо елемент <html>
-//   const html = document.querySelector('html');
-
-//   // Забороняємо/дозволяємо прокручування сторінки
-//   if (mobileMenu.classList.contains('open')) {
-//     html.style.overflow = 'hidden';
-//   } else {
-//     html.style.overflow = '';
-//   }
-// });
-
-// menuButton.on('click', function(){ $('body').toggleClass('no-scroll');
-// });
-
-// menuButton.on('click', function(){ $('body').removeClass('no-scroll');
-// });
-
-
-
-
-
-
-
-// Визначення браузера, що використовується користувачем
-var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-
-// Відображення відповідного контенту залежно від браузера
-if (isChrome) {
-  document.getElementById("chrome").style.display = "block";
-} else if (isFirefox) {
-  document.getElementById("firefox").style.display = "block";
-}
-// nav_fixed
-const navbar = document.getElementById("navbar");
-
-window.addEventListener("scroll", function() {
-  if (window.pageYOffset >= 100) {
-    navbar.classList.remove("static");
-    navbar.classList.add("fixed", "top-0");
-  } else {
-    navbar.classList.remove("fixed", "top-0");
-    navbar.classList.add("static");
-  }
-});
-</script>
-      
-  
     <style>
       
       #mobile-menu.open {

@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.2.7 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -31,6 +31,7 @@
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
 */
 
 html {
@@ -47,6 +48,8 @@ html {
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
 }
 
 /*
@@ -586,10 +589,7 @@ video {
 }
 
 .inset-0 {
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  inset: 0px;
 }
 
 .inset-x-0 {
@@ -815,12 +815,8 @@ video {
   height: 100%;
 }
 
-.h-5 {
-  height: 1.25rem;
-}
-
-.h-2 {
-  height: 0.5rem;
+.h-60 {
+  height: 15rem;
 }
 
 .w-10 {
@@ -1090,6 +1086,16 @@ video {
   border-bottom-color: rgb(29 78 216 / var(--tw-border-opacity));
 }
 
+.bg-\[\#1394c3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(19 148 195 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#ff328e\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 50 142 / var(--tw-bg-opacity));
+}
+
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
@@ -1120,24 +1126,9 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-green-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
-}
-
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
-}
-
-.bg-lime-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(101 163 13 / var(--tw-bg-opacity));
 }
 
 .bg-red-200 {
@@ -1168,50 +1159,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[\#fff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#13abc3\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 171 195 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#13c359\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 195 89 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#1394c3\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 148 195 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#0cb476\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(12 180 118 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#b43e0c\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(180 62 12 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#b40c58\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(180 12 88 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#ff328e\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 50 142 / var(--tw-bg-opacity));
 }
 
 .bg-no-repeat {
@@ -1480,16 +1427,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-green-300 {
-  --tw-text-opacity: 1;
-  color: rgb(134 239 172 / var(--tw-text-opacity));
-}
-
-.text-green-400 {
-  --tw-text-opacity: 1;
-  color: rgb(74 222 128 / var(--tw-text-opacity));
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -1740,22 +1677,22 @@ video {
   text-decoration-line: underline;
 }
 
-.dark .dark\:border-gray-600 {
+:is(.dark .dark\:border-gray-600) {
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 
-.dark .dark\:text-gray-600 {
+:is(.dark .dark\:text-gray-600) {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
-.dark .dark\:text-gray-800 {
+:is(.dark .dark\:text-gray-800) {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
-.dark .dark\:text-white {
+:is(.dark .dark\:text-white) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1818,6 +1755,11 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:-mx-4 {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
   .md\:mr-6 {
     margin-right: 1.5rem;
   }
@@ -1868,6 +1810,16 @@ video {
 
   .md\:p-6 {
     padding: 1.5rem;
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .md\:text-justify {
@@ -1923,6 +1875,10 @@ video {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:max-w-xl {
@@ -1985,5 +1941,13 @@ video {
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:pl-6 {
+    padding-left: 1.5rem;
+  }
+
+  .lg\:pr-6 {
+    padding-right: 1.5rem;
   }
 }

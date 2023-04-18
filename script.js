@@ -27,10 +27,10 @@ const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", function() {
   if (window.pageYOffset >= 100) {
-    navbar.classList.remove("static","bg-white");
-    navbar.classList.add("fixed", "top-0","bg-gray-300");
+    navbar.classList.remove("static");
+    navbar.classList.add("fixed", "top-0");
   } else {
-    navbar.classList.remove("fixed", "top-0","bg-gray-300");
-    navbar.classList.add("static","bg-white");
+    navbar.classList.remove("fixed", "top-0");
+    navbar.classList.add("static");
   }
 });
